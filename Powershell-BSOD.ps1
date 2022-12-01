@@ -1,6 +1,6 @@
 # Caution: This code WILL cause a BSOD on any Wndows system
 
-# Assign in Native API Functions
+# Assign Native API Functions
 $signature = @'
   
 [DllImport("ntdll.dll", CallingConvention = CallingConvention.StdCall, CharSet = CharSet.Ansi)]
@@ -16,9 +16,9 @@ public static extern IntPtr NtRaiseHardError(
     [In] uint Input1,
     [In] int Input2,
     [In] int Input3,
-    [In] int Output1,
     [In] int Input4,
-    [Out] out int Output2
+    [In] int Input5,
+    [Out] out int Output1
 );
 
 '@
